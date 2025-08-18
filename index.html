@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anúncio de Produto</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <span>Anúncio de Produto</span>
+  </div>
+
+  <div class="content">
+    <div class="content-actions">
+      <button class="icon-btn" id="favBtn" title="Favoritar"><i class="fa-regular fa-heart"></i></button>
+      <button class="icon-btn" id="shareBtn" title="Compartilhar"><i class="fa-solid fa-share-nodes"></i></button>
+    </div>
+
+    <div class="product-title">Dell Optiplex 9010</div>
+    <div class="image-wrapper">
+      <img id="main-image" src="./Sources/computador.jpg" alt="Dell Optiplex 9010" class="product-image">
+    </div>
+
+    <div class="gallery">
+      <img src="./Sources/computador2.jpg" alt="Miniatura 1" onclick="swapImage(this)">
+      <img src="./Sources/computador.jpg" alt="Miniatura 2" onclick="swapImage(this)">
+      <img src="./Sources/computador2.jpg" alt="Miniatura 3" onclick="swapImage(this)">
+      <img src="./Sources/computador.jpg" alt="Miniatura 4" onclick="swapImage(this)">
+    </div>
+    
+    <div class="price">R$ 950</div>
+    <div class="actions">
+      <button class="btn btn-primary">Comprar</button>
+      <button class="btn btn-secondary">Adicionar ao carrinho</button>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan lobortis quam, a feugiat libero vestibulum et. Sed congue diam velit, sit amet lacinia tellus sodales non. Suspendisse suscipit consectetur euismod. Morbi rhoncus purus ornare nulla lacinia, sit amet ultrices leo luctus. Nullam lacus metus, pulvinar feugiat feugiat eu, aliquam in mauris. Aenean ultricies tincidunt finibus. Duis sit amet magna mollis, imperdiet libero at, aliquet magna.</p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
