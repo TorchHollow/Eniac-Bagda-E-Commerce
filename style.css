@@ -7,16 +7,7 @@ body{
     flex-direction:column;
     min-height:100vh;
   }
-  .header{
-    background:#0b57d0;
-    color:#fff;
-    padding:16px 24px;
-    font-size:20px;
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
+
   .icon-btn{
     background:none;
     border:none;
@@ -71,7 +62,7 @@ body{
     display:inline-block;
   }
   .product-image{
-    width:100%;
+    width:500px;
     max-width:500px;
     height:auto;
     border-radius:12px;
@@ -151,4 +142,7 @@ body{
     .product-title{font-size:24px;}
     .price{font-size:22px;}
     .btn{width:100%; text-align:center;}
+    .product-image{
+      width:250px;
+    }
   }
