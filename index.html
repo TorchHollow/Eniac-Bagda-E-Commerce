@@ -8,25 +8,26 @@
 
 </head>
 <body>
+  <header>📊 Dashboard de Vendas</header>
 
   <main class="container">
     <section class="grid">
       <div class="card">
         <h2>Faturamento Bruto</h2>
-        <div class="value">R$ 5.523,26</div>
+        <div class="value" id="faturamentoBruto">R$ 0,00</div>
       </div>
       <div class="card">
         <h2>Faturamento Líquido</h2>
-        <div class="value">R$ 4.328,59</div>
+        <div class="value" id="faturamentoLiquido">R$ 0,00</div>
       </div>
       <div class="card">
         <h2>Reembolsos Totais</h2>
-        <div class="value">R$ 125,66</div>
+        <div class="value" id="reembolsosTotais">R$ 0,00</div>
       </div>
     </section>
 
-    <section class="grid" style="margin-top:32px;">
-      <div class="card" style="grid-column: span 2;">
+    <section class="grid" style="margin-top:24px;">
+      <div class="card" style="grid-column: 1 / -1;">
         <h2>Resumo das Vendas</h2>
         <canvas id="salesChart"></canvas>
       </div>
@@ -35,6 +36,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./script.js"></script>
-
+  
 </body>
 </html>
