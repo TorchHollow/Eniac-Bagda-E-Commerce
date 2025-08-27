@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Produtos</title>
+  <link rel="stylesheet" href="../CSS/catalogo.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../IMGS/Logos-Eniac-2019.png" alt="Logo Eniac">
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Produtos</a>
+      <a href="#" id="carrinhoBtn">Carrinho</a>
+    </nav>
+  </header>
+
+  <main>
+    <aside class="filtro">
+      <h2>Filtro</h2>
+
+      <div class="filtro-box">
+        <h3>Faixa de preço</h3>
+        <div class="price-range">
+          <input type="range" id="minPrice" min="0" max="5000" value="500">
+          <input type="range" id="maxPrice" min="0" max="5000" value="3000">
+          <p>R$ <span id="minValue">10</span> - R$ <span id="maxValue">3000</span></p>
+        </div>
+      </div>
+
+      <div class="filtro-box">
+        <h3>Condição</h3>
+        <label><input type="checkbox" value="novo"> Novo</label>
+        <label><input type="checkbox" value="usado"> Usado</label>
+        <label><input type="checkbox" value="semi-novo"> Semi-novo</label>
+      </div>
+
+      <div class="filtro-box">
+        <h3>Categoria</h3>
+        <label><input type="checkbox" value="Computadores"> Computadores</label>
+        <label><input type="checkbox" value="perifericos"> Periféricos</label>
+        <label><input type="checkbox" value="livros"> Livros</label>
+        <label><input type="checkbox" value="moveis"> Móveis</label>
+        <label><input type="checkbox" value="camras"> Câmeras</label>
+        <label><input type="checkbox" value="outros"> Outros</label>
+      </div>
+      
+    </aside>
+
+    <section class="produtos">
+      <div class="produto" data-price="1200" data-condicao="novo" data-categoria="notebook">
+        <img src="https://via.placeholder.com/150" alt="Produto">
+        <p>Notebook Gamer</p>
+        <p class="preco">R$ 1.200</p>
+        <button class="addCarrinho">Adicionar</button>
+      </div>
+    
+      <div class="produto" data-price="800" data-condicao="usado" data-categoria="pc">
+        <img src="https://via.placeholder.com/150" alt="Produto">
+        <p>PC Usado</p>
+        <p class="preco">R$ 800</p>
+        <button class="addCarrinho">Adicionar</button>
+      </div>
+    
+      <div class="produto" data-price="2500" data-condicao="novo" data-categoria="perifericos">
+        <img src="https://via.placeholder.com/150" alt="Produto">
+        <p>Kit Periféricos</p>
+        <p class="preco">R$ 2.500</p>
+        <button class="addCarrinho">Adicionar</button>
+      </div>
+    
+      <div class="produto" data-price="3500" data-condicao="novo" data-categoria="pc">
+        <img src="https://via.placeholder.com/150" alt="Produto">
+        <p>PC Gamer</p>
+        <p class="preco">R$ 3.500</p>
+        <button class="addCarrinho">Adicionar</button>
+      </div>
+    
+      <div class="produto" data-price="4500" data-condicao="novo" data-categoria="notebook">
+        <img src="https://via.placeholder.com/150" alt="Produto">
+        <p>Notebook Ultra</p>
+        <p class="preco">R$ 4.500</p>
+        <button class="addCarrinho">Adicionar</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="carrinhoBox" class="carrinho-box">
+    <h2>Meu Carrinho</h2>
+    <ul id="carrinhoItens"></ul>
+    <p><strong>Total:</strong> R$ <span id="carrinhoTotal">0</span></p>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+    <button id="fecharCarrinho">Fechar</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section institucional">
+        <img src="../IMGS/Logos-Eniac-2019.png" alt="ENIAC" class="footer-logo">
+        <p>Centro Universitário ENIAC - Inovação e Educação de Qualidade em Guarulhos e além.</p>
+      </div>
+  
+      <div class="footer-section nav-rapida">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="/sobre">Sobre o ENIAC</a></li>
+          <li><a href="https://www.eniac.edu.br/blog">Blog</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section politicas">
+        <h4>Políticas</h4>
+        <ul>
+          <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>
+          <li><a href="/trocas-e-devolucoes">Trocas e Devoluções</a></li>
+          <li><a href="/termos-de-uso">Termos de Uso</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section contato">
+        <h4>Contato</h4>
+        <p>Telefone: (11) 2199-0988</p>
+        <p>E-mail: contato@eniac.edu.br</p>
+        <p>Endereço: Rua Força Pública, 89 - Centro, Guarulhos/SP</p>
+      </div>
+  
+      <div class="footer-section redes-sociais">
+        
+        <a href="https://www.facebook.com/eniac.oficial" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/eniac.oficial/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/school/eniac/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  
+    <div class="footer-copy">
+      <p>&copy; 2025 ENIAC - Todos os direitos reservados | CNPJ: 43.133.260/0001-80</p>
+    </div>
+  </footer>
+
+  <script src="../JS/catalogo.js"></script>
+  <script src="https://kit.fontawesome.com/749fc0cbee.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastrar Produto – ENIAC</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/cadastroprod.css">
+</head>
+<body>
+  
+  <header class="topbar">
+    <div class="topbar__inner">
+
+        <img src="../IMGS/Logos-Eniac-2019.png" class="brand" aria-label="ENIAC">
+      </a>
+
+      <nav class="menu">
+        <a class="menu__item active" href="#" data-action="cadastrar">cadastrar<br>Produto</a>
+        <a class="menu__item" href="#" data-action="vendas">Gerenciamento de<br>vendas</a>
+        <a class="menu__item" href="#" data-action="dashboard">dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="upload-card" aria-label="Imagem do produto">
+      <input id="fileInput" type="file" accept="image/*" hidden>
+      <div id="dropZone" class="dropzone" tabindex="0">
+        
+        <svg class="img-icon" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="4" y="6" width="40" height="36" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="33" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M8 36l11-13 9 9 5-5 7 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <p class="hint">Arraste uma imagem aqui ou <button id="chooseBtn" type="button" class="link-btn">clique para selecionar</button></p>
+
+        <img id="preview" class="preview" alt="Pré-visualização da imagem" hidden>
+      </div>
+    </section>
+
+    <section class="form-card">
+      <form id="productForm" novalidate>
+          
+        <label class="field">
+          <span class="label">Nome do Produto:</span>
+          <input type="text" name="nome" placeholder="Ex.: Teclado Mecânico" required>
+        </label>
+
+        <label class="field">
+          <span class="label">Descrição do produto:</span>
+          <textarea name="descricao" placeholder="Detalhes, cor, marca..." rows="3"></textarea>
+        </label>
+
+        <label class="field">
+          <span class="label">Valor:</span>
+          <input type="number" step="0.01" min="0" name="valor" placeholder="Ex.: 199.90" required>
+        </label>
+
+        <label class="field">
+          <span class="label">Condição</span>
+          <div class="select-wrap">
+            <select name="condicao" required>
+              <option value="" selected disabled>Selecione...</option>
+              <option>Novo</option>
+              <option>Semi-novo</option>
+              <option>Usado</option>
+            </select>
+            
+            <span class="select-caret" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Cadastrar produto</button>
+          <button type="reset" class="btn-ghost">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="../JS/cadastroprod.js"></script>
+</body>
+</html>
