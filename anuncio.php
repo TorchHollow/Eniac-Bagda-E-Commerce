@@ -66,7 +66,8 @@ if (!$produto) {
 
     <!-- Botão Comprar -->
     <div class="acoes">
-        <a href="carrinho.php?add=<?= $produto['id'] ?>" class="btn-comprar">Adicionar ao Carrinho</a>
+        <a href="checkout.php?produto=<?= $produto['id'] ?>" class="btn-comprar">Comprar</a>
+        <a href="carrinho.php?add=<?= $produto['id'] ?>" class="btn-carrinho">Adicionar ao Carrinho</a>
     </div>
 
   </main>
