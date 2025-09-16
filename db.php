@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root"; // altere se necessário
-$pass = "";     // senha do seu MySQL
-$db   = "loja";
+$user = "root"; // seu usuário do MySQL
+$pass = "";     // sua senha do MySQL
+$db   = "loja"; // nome do banco
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
