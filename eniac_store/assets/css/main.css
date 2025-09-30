@@ -1,0 +1,103 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Variáveis de Cor Globais */
+:root {
+    --primary-color: #0056a6;
+    --secondary-color: #004aad;
+    --light-bg: #f8f9fa;
+    --text-color: #212529;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* --- Header Unificado (Sem alterações) --- */
+/* ... (código do header da versão anterior) ... */
+.header-main { background-color: var(--primary-color); }
+.header-nav { background-color: var(--secondary-color); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.header-nav .nav-link { color: rgba(255, 255, 255, 0.85); font-weight: 500; transition: color 0.2s ease-in-out; }
+.header-nav .nav-link:hover, .header-nav .nav-link.active { color: white; }
+
+/* --- Estilos de Componentes --- */
+.page-title { font-weight: 700; color: var(--text-color); margin-bottom: 2rem; }
+.card { border: none; box-shadow: var(--card-shadow); }
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* --- Botões de Compra (NOVA REGRA) --- */
+.btn-checkout, .btn-confirm {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+    font-weight: 500;
+}
+.btn-checkout:hover, .btn-confirm:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+/* --- Tabelas do Admin --- */
+.table-responsive-custom { background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--card-shadow); }
+.table thead th { background-color: var(--light-bg); border-bottom: 2px solid #dee2e6; }
+.table .actions button, .table .actions .btn { margin-right: 5px; font-size: 0.85rem; }
+
+/* --- Modais (Pop-ups) --- */
+.modal-header { background-color: var(--primary-color); color: white; }
+.modal-header .btn-close { filter: invert(1) grayscale(100%) brightness(200%); }
+
+/* --- Painel do Admin (NOVO) --- */
+.admin-panel {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+/* Ajuste nos cards internos do admin para não terem sombra própria */
+.admin-panel .admin-card {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    height: 100%; /* Garante que os cards na mesma linha tenham a mesma altura */
+}
+
+.admin-card h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.admin-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.admin-card ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.2s;
+}
+
+.admin-card ul li a:hover {
+    color: var(--primary-color);
+    font-weight: 500;
+}
