@@ -1,0 +1,13 @@
+.page-title { text-align: center; margin-bottom: 2rem; }
+.checkout-form { max-width: 700px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.form-section { margin-bottom: 1.5rem; }
+.form-section h3 { border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+.form-section label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+.form-section input { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 1rem; }
+.form-section input:disabled { background: #f4f4f4; cursor: not-allowed; }
+
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.summary-row.total { font-size: 1.2rem; font-weight: bold; }
+
+.btn-confirm-order { display: block; width: 100%; padding: 1rem; background-color: #27ae60; color: white; text-align: center; text-decoration: none; border: none; border-radius: 8px; font-size: 1.2rem; font-weight: bold; cursor: pointer; }
+.btn-confirm-order:hover { background-color: #229954; }

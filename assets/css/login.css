@@ -1,0 +1,781 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #58acf5;
+}
+.container {
+  position: relative;
+  width: 40%;
+  max-width: 1000px;
+  height: 60%;
+  display: flex;
+  border-radius: 20px;
+  background-color: #182240;
+}
+.middle-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3698d4;
+  border-radius: 17px 0 0 17px;
+}
+.middle-screen img {
+  width: 300px;
+  position: relative;
+  bottom: 13%;
+}
+.middle-screen h1 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  position: relative;
+  bottom: 8%;
+}
+.middle-screen p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+.cadastro {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cadastro a {
+  position: relative;
+  top: 16%;
+}
+.img-google-1 {
+  width: 35px;
+  transition: 0.2s ease-in-out;
+}
+.img-google-1:hover {
+  transform: scale(1.1);
+}
+.login {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login a {
+  position: relative;
+  top: 28%;
+}
+.img-google-2 {
+  width: 35px;
+  transition: 0.2s ease-in-out;
+}
+.img-google-2:hover {
+  transform: scale(1.1);
+}
+.title-form,
+.title-login {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+}
+.title-form {
+  position: relative;
+  top: 12%;
+}
+.title-login {
+  position: relative;
+  top: 25%;
+}
+.form-cadastro {
+  width: 95%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group input {
+  width: 300px;
+  height: 20px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+input::placeholder {
+  font-size: 15px;
+  color: #000;
+  opacity: 0.4;
+  font-weight: 600;
+}
+.link-login {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  bottom: 1%;
+  right: 7%;
+}
+.link-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  bottom: 3%;
+  right: 14%;
+}
+.paragrafo-login {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  top: 15%;
+}
+.paragrafo-cadastro1 {
+  color: #fff;
+  font-size: 18px;
+}
+.link-login p,
+.link-cadastro p {
+  font-weight: 700;
+  opacity: 0.6;
+}
+.link-login a,
+.link-cadastro a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #3698d4;
+  font-weight: 700;
+  transition: 0.5s ease-in-out;
+}
+.link-login a:hover,
+.link-cadastro a:hover {
+  text-decoration: underline;
+}
+.btn-cadastro,
+.btn-login {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  background-color: #3698d4;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn-cadastro {
+  position: relative;
+  bottom: 1%;
+}
+.btn-login {
+  position: relative;
+  bottom: 1%;
+}
+.btn-cadastro:hover,
+.btn-login:hover {
+  box-shadow: 0 0 15px #2af5bb;
+}
+.container.dim {
+  opacity: 0.7;
+  transition: opacity 0.9s ease-in-out;
+  pointer-events: none;
+}
+.recuperar-senha {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #182240;
+  z-index: -100;
+  opacity: 0;
+  transition: opacity 0.5s ease, z-index 0.5s ease;
+  border-radius: 10px;
+}
+.recuperar-senha.show {
+  z-index: 999;
+  opacity: 1;
+  transition: 0.7s ease-in-out;
+}
+.btn-close {
+  position: relative;
+  left: 45%;
+  bottom: 2%;
+  transform: rotate(45deg);
+}
+.btn-close a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 50px;
+}
+.recuperar-senha img {
+  width: 65%;
+  height: 65%;
+}
+.img-email {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 20%;
+}
+.title-recuperar-senha {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  bottom: 20%;
+  right: 20%;
+}
+.paragrafo-recuperar-senha {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  font-weight: 500;
+  text-align: start;
+  position: relative;
+  bottom: 15%;
+  left: 1%;
+}
+.form-recuperar-senha {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 3%;
+  bottom: 11%;
+}
+.form-recuperar-senha label {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+.form-recuperar-senha input {
+  width: 450px;
+  height: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  border: 2px solid rgba(115, 114, 114, 0.3);
+  border-radius: 5px;
+  outline: none;
+}
+.btn-recuperar-senha {
+  width: 475px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3698d4;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  right: 2.5%;
+  top: 25%;
+  transition: 0.5s ease-in-out;
+}
+.btn-recuperar-senha:hover {
+  background-color: #fff;
+  color: #182240;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 1.1s ease;
+}
+.mensagem {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: none;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mensagem.sucesso {
+  background: #d4edda;
+  color: #155724;
+}
+
+.mensagem.erro {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.mensagem.aviso {
+  background: #fff3cd;
+  color: #856404;
+}
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast.erro {
+  background-color: #f44336;
+}
+
+@keyframes esquerdaParaDireita {
+  from {
+    left: 0;
+    border-radius: 17px 0 0 17px;
+  }
+  to {
+    left: 50%;
+    border-radius: 0 17px 17px 0;
+  }
+}
+
+@keyframes direitaParaEsquerda {
+  from {
+    left: 50%;
+    border-radius: 0 17px 17px 0;
+  }
+  to {
+    left: 0;
+    border-radius: 17px 0 0 17px;
+  }
+}
+.ir-direita {
+  animation: esquerdaParaDireita 1.7s ease forwards;
+}
+
+.ir-esquerda {
+  animation: direitaParaEsquerda 1.7s ease forwards;
+}
+
+/* smartphone */
+@media (min-width: 414px) and (max-width: 767px) {
+  .container {
+    width: 90%;
+    height: 50%;
+  }
+  .form-group input {
+    width: 90%;
+    height: 15px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+  }
+  .title-form {
+    font-size: 25px;
+    position: relative;
+    top: 12%;
+  }
+  .title-login {
+    font-size: 25px;
+    position: relative;
+    top: 20%;
+  }
+  .middle-screen img {
+    width: 80%;
+    position: relative;
+    bottom: 10%;
+  }
+  .middle-screen h1 {
+    font-size: 28px;
+    position: relative;
+    text-align: center;
+    bottom: 5%;
+  }
+  .middle-screen p {
+    font-size: 18px;
+  }
+  .cadastro a {
+    font-size: 15px;
+    position: relative;
+    top: 15%;
+  }
+  .link-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    bottom: 30%;
+    right: 17%;
+  }
+  .link-cadastro a {
+    font-size: 15px;
+  }
+  .login a {
+    position: relative;
+    top: 25%;
+  }
+  .link-login {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    bottom: 15%;
+    right: 3%;
+  }
+  .link-login p {
+    font-size: 15px;
+  }
+  .btn-cadastro,
+  .btn-login {
+    width: 200px;
+    height: 40px;
+  }
+  .btn-cadastro {
+    position: relative;
+    bottom: 10%;
+  }
+  .btn-login {
+    position: relative;
+    bottom: 20%;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    height: 90%;
+  }
+
+  .form-group input {
+    width: 230px;
+    height: 15px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+  }
+  .title-form {
+    font-size: 25px;
+    position: relative;
+    top: 12%;
+  }
+  .title-login {
+    font-size: 25px;
+    position: relative;
+    top: 23%;
+  }
+  .middle-screen img {
+    width: 250px;
+    position: relative;
+    bottom: 10%;
+  }
+  .middle-screen h1 {
+    font-size: 28px;
+    position: relative;
+    bottom: 5%;
+  }
+  .middle-screen p {
+    font-size: 18px;
+  }
+  .cadastro a {
+    font-size: 15px;
+    position: relative;
+    top: 18%;
+  }
+  .link-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    bottom: 33%;
+    right: 14%;
+  }
+  .link-cadastro a {
+    font-size: 15px;
+  }
+  .login a {
+    position: relative;
+    top: 28%;
+  }
+  .link-login {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    bottom: 20%;
+    right: 5%;
+  }
+  .link-login p {
+    font-size: 15px;
+  }
+  .btn-cadastro,
+  .btn-login {
+    width: 200px;
+    height: 40px;
+  }
+}
+
+/* notebook */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container {
+    width: 90%;
+    height: 90%;
+  }
+  .form-group input {
+    width: 20rem;
+    height: 15px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+  }
+  input::placeholder {
+    font-size: 15px;
+  }
+  .title-form {
+    font-size: 29px;
+    position: relative;
+    top: 4%;
+  }
+  .title-login {
+    font-size: 29px;
+    position: relative;
+    top: 20%;
+  }
+  .middle-screen img {
+    width: 250px;
+    position: relative;
+    bottom: 10%;
+  }
+  .middle-screen h1 {
+    font-size: 30px;
+    position: relative;
+    bottom: 5%;
+  }
+  .middle-screen p {
+    font-size: 22px;
+  }
+  .cadastro a {
+    font-size: 18px;
+    position: relative;
+    top: 6%;
+  }
+  .link-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    bottom: 1%;
+    right: 20%;
+  }
+  .link-cadastro a {
+    font-size: 13px;
+    position: relative;
+    top: 15%;
+  }
+  .link-login {
+    width: 50%;
+    height: 30px;
+    gap: 10px;
+    position: relative;
+    bottom: 2%;
+    right: 8%;
+  }
+  .link-login a {
+    font-size: 13px;
+    position: relative;
+    top: 15%;
+  }
+  .link-login p {
+    font-size: 13px;
+  }
+  .login a {
+    position: relative;
+    top: 22%;
+  }
+  .btn-cadastro,
+  .btn-login {
+    width: 200px;
+    height: 40px;
+  }
+  .btn-cadastro {
+    font-size: 15px;
+    position: relative;
+    bottom: 2%;
+  }
+  .btn-login {
+    font-size: 15px;
+    position: relative;
+    top: 5%;
+  }
+  .recuperar-senha {
+    height: 500px;
+    gap: 5px;
+  }
+  .form-recuperar-senha {
+    position: relative;
+    bottom: 13%;
+  }
+  .title-recuperar-senha {
+    position: relative;
+    bottom: 17%;
+    left: 1%;
+  }
+  .paragrafo-recuperar-senha {
+    position: relative;
+    bottom: 15%;
+  }
+  .recuperar-senha {
+    position: absolute;
+    width: 500px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #182240;
+    z-index: -100;
+    opacity: 0;
+    transition: opacity 0.5s ease, z-index 0.5s ease;
+    border-radius: 10px;
+  }
+  .recuperar-senha.show {
+    z-index: 999;
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+  }
+  .btn-close {
+    position: relative;
+    top: 1%;
+    left: 43%;
+    transform: rotate(45deg);
+  }
+  .btn-close a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 50px;
+  }
+  .recuperar-senha img {
+    width: 60%;
+    height: 60%;
+  }
+  .img-email {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 10%;
+  }
+  .title-recuperar-senha {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    bottom: 5%;
+    right: 25%;
+  }
+  .paragrafo-recuperar-senha {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    font-weight: 500;
+    text-align: start;
+    position: relative;
+    bottom: 5%;
+    left: 1%;
+  }
+  .form-recuperar-senha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 3%;
+    bottom: 3%;
+  }
+  .form-recuperar-senha label {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+  }
+  .form-recuperar-senha input {
+    width: 450px;
+    height: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border: 2px solid rgba(115, 114, 114, 0.3);
+    border-radius: 5px;
+    outline: none;
+  }
+  .btn-recuperar-senha {
+    width: 475px;
+    height: 40px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3698d4;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    top: 5%;
+    transition: 0.5s ease-in-out;
+  }
+  .btn-recuperar-senha:hover {
+    background-color: #fff;
+    color: #182240;
+  }
+}

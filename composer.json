@@ -1,0 +1,7 @@
+{
+    "name": "arthur/ite-unificado",
+    "description": "Projeto de e-commerce do Eniac.",
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    }
+}

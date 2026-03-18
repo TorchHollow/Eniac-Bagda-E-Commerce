@@ -1,0 +1,284 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #222;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.cabecalho .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .menu {
+    display: none;
+    width: 100%;
+    background: #333;
+    margin-top: 1rem;
+  }
+  .menu.ativo {
+    display: block;
+  }
+  .menu ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .menu ul li {
+    border-top: 1px solid #444;
+  }
+  .menu ul li a {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Produto */
+.titulo-produto {
+  font-size: 2rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+.galeria {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.img-principal {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.img-principal.zoom {
+  transform: scale(1.8);
+  cursor: zoom-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.miniaturas img {
+  width: 80px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+.miniaturas img:hover {
+  border-color: #0077cc;
+}
+
+/* Botões de navegação */
+.nav-btn {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.nav-btn.prev {
+  left: 10px;
+}
+
+.nav-btn.next {
+  right: 10px;
+}
+
+/* Preço */
+.preco {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0077cc;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Botões */
+.acoes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-comprar, .btn-carrinho {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  text-align: center;
+  min-width: 180px;
+}
+
+.btn-comprar {
+  background: #28a745;
+  color: #fff;
+}
+
+.btn-comprar:hover {
+  background: #218838;
+}
+
+.btn-carrinho {
+  background: #ffc107;
+  color: #000;
+}
+
+.btn-carrinho:hover {
+  background: #e0a800;
+}
+
+/* Descrição */
+.descricao {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.descricao h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.rodape {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #222;
+  color: #fff;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+  .titulo-produto {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .img-principal {
+    width: 80%;
+    max-width: 400px;
+  }
+  .preco {
+    font-size: 1.5rem;
+  }
+  .btn-comprar, .btn-carrinho {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-produto {
+    font-size: 1.4rem;
+  }
+  .img-principal {
+    width: 100%;
+    max-width: 300px;
+  }
+  .miniaturas img {
+    width: 60px;
+  }
+  .preco {
+    font-size: 1.3rem;
+  }
+  .acoes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-comprar, .btn-carrinho {
+    width: 100%;
+    max-width: 280px;
+  }
+  .descricao {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

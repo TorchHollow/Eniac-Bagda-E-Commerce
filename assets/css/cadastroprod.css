@@ -1,0 +1,95 @@
+/* Define o layout principal do formulário com duas colunas */
+#productForm {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas pequenas */
+    gap: 20px;
+}
+
+/* Card de upload de imagens (à esquerda) */
+.upload-card {
+    flex: 1; /* Ocupa 1 parte do espaço */
+    min-width: 300px; /* Largura mínima antes de quebrar a linha */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Card do formulário de dados (à direita) */
+.form-card {
+    flex: 2; /* Ocupa 2 partes do espaço, ficando maior */
+    min-width: 300px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.upload-card h3, .form-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilo geral para cada campo do formulário */
+.field {
+    margin-bottom: 15px;
+}
+
+.field .label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Estilo dos inputs, textareas e selects */
+.field input[type="text"],
+.field input[type="number"],
+.field textarea,
+.field select,
+.field input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+/* Estilo para a área de botões */
+.actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn-primary {
+    padding: 12px 25px;
+    background-color: #0056a6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004180;
+}
+
+.file-name {
+    display: block; /* Garante que fique em sua própria linha */
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #0056a6; /* Cor azul para destaque */
+    font-style: italic;
+    font-weight: bold;
+}

@@ -1,0 +1,134 @@
+/* Container principal da página de catálogo */
+.catalogo-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+/* Barra lateral de filtros */
+.filtro {
+    flex: 0 0 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filtro h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.filtro-box {
+    margin-bottom: 25px;
+}
+
+.filtro-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.filtro-box label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.filtro-box input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.price-range input[type="range"] {
+    width: 100%;
+}
+
+.price-range p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Grid de produtos */
+.produtos-grid {
+    flex-grow: 1;
+    display: grid;
+    /* TAMANHO DOS CARDS DIMINUÍDO */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.produto-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.produto-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 200px;
+    /* ZOOM DA IMAGEM REMOVIDO */
+    object-fit: contain;
+    background-color: #f8f9fa; /* Fundo suave para imagens que não preenchem o espaço */
+}
+
+.produto-card h3 {
+    font-size: 1.1rem;
+    margin: 15px;
+    flex-grow: 1; 
+}
+
+.produto-card .preco {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0056a6;
+    margin: 0 15px 15px;
+}
+
+.ver-detalhes-btn {
+    display: block;
+    background-color: #0056a6;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px 15px 15px;
+    margin-top: auto; 
+}
+
+.ver-detalhes-btn:hover {
+    background-color: #004aad;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .catalogo-container {
+        flex-direction: column;
+    }
+
+    .filtro {
+        flex: 0 0 auto; 
+        width: 100%;
+    }
+}
